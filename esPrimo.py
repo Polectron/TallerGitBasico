@@ -1,5 +1,5 @@
 """
-Autor: X
+Autor: Daniel Rückert García
 """
 
 
