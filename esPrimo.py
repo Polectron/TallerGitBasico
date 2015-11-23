@@ -10,14 +10,12 @@ def esPrimo(n):
     params: un numero n
     return: True si es primo y False de no serlo
     """
-
     #Si es menor que 2 no puede ser primo
-    if n < 2:    return False
-
+    if n < 2:	return False
+	
     #El rango de 2 hasta n
     for i in range(2, n):
-        if n % i == 0:    return False
-
+        if n % i == 0:	return False
     return True
 
 def esPrimoIntervalo(i, k):
@@ -27,6 +25,15 @@ def esPrimoIntervalo(i, k):
     return: retorna una lista de duplas
     """
     return [(x, esPrimo(x)) for x in range(i, k)]
+
+
+def cuantosDivisores(n):
+    # Devolver la cantidad de divisores que tiene el número, incluyendo 1 y a sí mismo
+    count = 2
+    for i in range(2, n):
+        if n % i == 0:	count+=1
+    return count
+        
 
 
 """
